@@ -6,43 +6,729 @@
 	<title>Jinhyun Nam</title>
 
 	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link rel="stylesheet" type="text/css" href="section.css" />
 	<script src="main.js"></script>
 	<script>
 		window.onload = function(){
-			navi_lock();
+			//navi_lock();
+			navi_click();
 		};
 	</script>
 </head>
 
 <body>
+
+	<nav id="navi" style="position:fixed; z-index:1000;">
+		<ul>
+			<li id="navi_top" class="navi_item">
+				<!-- strong>What is GOTY</strong -->
+				TOP
+			</li>
+			<li id="navi_2016" class="navi_item">
+				<!-- strong>2016 GOTY</strong -->
+				2016 GOTY
+			</li>
+			<li  id="navi_2015" class="navi_item">
+				<!-- strong>2015 GOTY</strong -->
+				2015 GOTY
+			</li>
+			<li id="navi_2014" class="navi_item">
+				<!-- strong>2014 GOTY</strong -->
+				2014 GOTY
+			</li>
+			<li id="navi_2013" class="navi_item">
+				<!-- strong>2013 GOTY</strong -->
+				2013 GOTY
+			</li>
+			<li id="navi_others" class="navi_item">
+				<!-- strong>Others</strong -->
+				Others
+			</li>
+		</ul>
+	</nav>
+
     <header id="banner">
-		<h2 id="logo">
-			SouthJH
-		</h2>
-		<nav id="navi">
-			<a href="main.html">intro</a>
-			<a href="">1</a>
-			<a href="">2</a>
-		</nav>
-	</header>
+		<div id="ln">
+			<div id="logo">
+				<i>South JH</i>
+			</div>
+			<div id="name">
+				jinhyun's assignment #1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			</div>
+		</div>
+	</header>	
 
 	<main>
-		<section>
-			<header>
-				first section
-			</header>
-			sectino's content
+		<section id="goty">
+			<h1>GOTY: Game Of The Year</h1>
+			<p>Game of the Year (abbreviated GotY) is a title awarded by various gaming publications to a deserving game. Many publications award a single "Game of the Year" to a single title that they feel represents the pinnacle of gaming achievement that year. Many games will release a "Game of the Year" edition after winning any of these awards, usually containing all the updates, downloadable content (DLC) and occasionally other extras such as a soundtrack.</p>
+			<h1>Metacritic</h1>
+			<p>Metacritic is a website that aggregates reviews of media products: music albums, video games, films, TV shows, and formerly, books. For each product, the scores from each review are averaged (a weighted average[2]). Metacritic was created by Jason Dietz, Marc Doyle, and Julie Doyle Roberts in 1999. The site provides an excerpt from each review and hyperlinks to its source. A color of Green, Yellow or Red summarizes the critics' recommendations. It has been described as the video game industry's "premier" review aggregator.
+			<br/><br/>
+			Metacritic's scoring converts each review into a percentage, either mathematically from the mark given, or which the site decides subjectively from a qualitative review. Before being averaged, the scores are weighted according to the critic's fame, stature, and volume of reviews.</p>
+			<a href="http://www.metacritic.com/">web page</a>
 		</section>
-		<section>
+		
+		<hr/>
+		
+		<section id="2016">
 			<header>
-				second section
+				<h1>2016 최다 GOTY 수상작</h1>
 			</header>
-
+			
+			<article class="first">
+				<header>
+					<div class="number1">
+						<strong>1<span style="font-size: 25pt;">st</span></strong>
+					</div>
+					<div class="title">
+						<strong>UNCHARTED 4: A THIEFS END</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/hh5HV4iic1Y" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">93</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">8.3</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>Play Station 4</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Modern, Action Adventure, Linear</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1601" class="summary" colspan="2"><div id="p1601">summary<div></td>
+						<script>
+							var sw1601 = 1;
+							document.getElementById('s1601').onclick = function(){
+								if(sw1601 === 1){
+									document.getElementById('p1601').innerHTML = "test text";
+									sw1601 = 0;
+								}
+								else{
+									document.getElementById('p1601').innerHTML = "summary";
+									sw1601 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="second">
+				<header>
+					<div class="number2">
+						<strong>2<span style="font-size: 25pt;">nd</span></strong>
+					</div>
+					<div class="title">
+						<strong>OVERWATCH</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/FqnKB22pOC0" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">91</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">6.8</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>PC, Play Station 4, XBOX ONE</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Action, Shooter, First-Person, Tactical</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1602" class="summary" colspan="2"><div id="p1602">summary<div></td>
+						<script>
+							var sw1602 = 1;
+							document.getElementById('s1602').onclick = function(){
+								if(sw1602 === 1){
+									document.getElementById('p1602').innerHTML = "test text";
+									sw1602 = 0;
+								}
+								else{
+									document.getElementById('p1602').innerHTML = "summary";
+									sw1602 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="third">
+				<header>
+					<div class="number3">
+						<strong>3<span style="font-size: 25pt;">rd</span></strong>
+					</div>
+					<div class="title">
+						<strong>DOOM</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/SgSrpnW0EmU" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">85</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">8.2</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>PC, Play Station 4, XBOX ONE, NS</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Sci-Fi, Third-Person, Shooter, First-Person</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1603" class="summary" colspan="2"><div id="p1603">summary<div></td>
+						<script>
+							var sw1603 = 1;
+							document.getElementById('s1603').onclick = function(){
+								if(sw1603 === 1){
+									document.getElementById('p1603').innerHTML = "test text";
+									sw1603 = 0;
+								}
+								else{
+									document.getElementById('p1603').innerHTML = "summary";
+									sw1603 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+		</section>
+		
+		<hr/>
+		
+		<section id="2015">
+			<header>
+				<h1>2015 최다 GOTY 수상작</h1>
+			</header>
+			
+			<article class="first">
+				<header>
+					<div class="number1">
+						<strong>1<span style="font-size: 25pt;">st</span></strong>
+					</div>
+					<div class="title">
+						<strong>THE WITCHER 3: WILD HUNT</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/tDfa1Qp2SwA" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">92</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">9.2</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>PC, Play Station 4, XBOX ONE</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Action RPG, Role-Playing</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1501" class="summary" colspan="2"><div id="p1501">summary<div></td>
+						<script>
+							var sw1501 = 1;
+							document.getElementById('s1501').onclick = function(){
+								if(sw1501 === 1){
+									document.getElementById('p1501').innerHTML = "test text";
+									sw1501 = 0;
+								}
+								else{
+									document.getElementById('p1501').innerHTML = "summary";
+									sw1501 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="second">
+				<header>
+					<div class="number2">
+						<strong>2<span style="font-size: 25pt;">nd</span></strong>
+					</div>
+					<div class="title">
+						<strong>Fallout 4</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/GE2BkLqMef4" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">84</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">5.4</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>PC, Play Station 4, XBOX ONE, HTC Vive</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Role-Playing, Western-Style</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1502" class="summary" colspan="2"><div id="p1502">summary<div></td>
+						<script>
+							var sw1502 = 1;
+							document.getElementById('s1502').onclick = function(){
+								if(sw1502 === 1){
+									document.getElementById('p1502').innerHTML = "test text";
+									sw1502 = 0;
+								}
+								else{
+									document.getElementById('p1502').innerHTML = "summary";
+									sw1502 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="third">
+				<header>
+					<div class="number3">
+						<strong>3<span style="font-size: 25pt;">rd</span></strong>
+					</div>
+					<div class="title">
+						<strong>BLOODBORNE</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/G203e1HhixY" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">92</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">8.8</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>Play Station 4</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Fantasy, Role-Playing, Action Adventure</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1503" class="summary" colspan="2"><div id="p1503">summary<div></td>
+						<script>
+							var sw1503 = 1;
+							document.getElementById('s1503').onclick = function(){
+								if(sw1503 === 1){
+									document.getElementById('p1503').innerHTML = "test text";
+									sw1503 = 0;
+								}
+								else{
+									document.getElementById('p1503').innerHTML = "summary";
+									sw1503 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+		</section>
+		
+		<hr/>
+		
+		<section id="2014">
+			<header>
+				<h1>2014 최다 GOTY 수상작</h1>
+			</header>
+			
+			<article class="first">
+				<header>
+					<div class="number1">
+						<strong>1<span style="font-size: 25pt;">st</span></strong>
+					</div>
+					<div class="title">
+						<strong>DRAGON AGE: INQUISITION</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/jJqxfkgSUog" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">89</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">7.4</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>PC, Play Station 3 & 4, XBOX 360 & ONE</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Role-Playing, Action RPG, Western-Style</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1401" class="summary" colspan="2"><div id="p1401">summary<div></td>
+						<script>
+							var sw1401 = 1;
+							document.getElementById('s1401').onclick = function(){
+								if(sw1401 === 1){
+									document.getElementById('p1401').innerHTML = "test text";
+									sw1401 = 0;
+								}
+								else{
+									document.getElementById('p1401').innerHTML = "summary";
+									sw1401 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="second">
+				<header>
+					<div class="number2">
+						<strong>2<span style="font-size: 25pt;">nd</span></strong>
+					</div>
+					<div class="title">
+						<strong>Middle-Earth: Shadow of Mordor</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/9Bg41Z6sqIw" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">84</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">8.1</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>PC, Play Station 4, XBOX ONE</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Fantasy, Action Adventure, Open-World</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1402" class="summary" colspan="2"><div id="p1402">summary<div></td>
+						<script>
+							var sw1402 = 1;
+							document.getElementById('s1402').onclick = function(){
+								if(sw1402 === 1){
+									document.getElementById('p1402').innerHTML = "test text";
+									sw1402 = 0;
+								}
+								else{
+									document.getElementById('p1402').innerHTML = "summary";
+									sw1402 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="third">
+				<header>
+					<div class="number3">
+						<strong>3<span style="font-size: 25pt;">rd</span></strong>
+					</div>
+					<div class="title">
+						<strong>Mario Kart 8</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/NA6CAgv6p6g" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">88</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">8.9</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>Nintendo Wii U</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Driving, Racing, Arcade, Automobile</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1403" class="summary" colspan="2"><div id="p1403">summary<div></td>
+						<script>
+							var sw1403 = 1;
+							document.getElementById('s1403').onclick = function(){
+								if(sw1403 === 1){
+									document.getElementById('p1403').innerHTML = "test text";
+									sw1403 = 0;
+								}
+								else{
+									document.getElementById('p1403').innerHTML = "summary";
+									sw1403 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+		</section>
+		
+		<hr/>
+		
+		<section id="2013">
+			<header>
+				<h1>2013 최다 GOTY 수상작</h1>
+			</header>
+			
+			<article class="first">
+				<header>
+					<div class="number1">
+						<strong>1<span style="font-size: 25pt;">st</span></strong>
+					</div>
+					<div class="title">
+						<strong>The Last of Us</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/W01L70IGBgE" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">95</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">9.2</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>Play Station 3</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Modern, Adventure, Action Adventure</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1301" class="summary" colspan="2"><div id="p1301">summary<div></td>
+						<script>
+							var sw1301 = 1;
+							document.getElementById('s1301').onclick = function(){
+								if(sw1301 === 1){
+									document.getElementById('p1301').innerHTML = "test text";
+									sw1301 = 0;
+								}
+								else{
+									document.getElementById('p1301').innerHTML = "summary";
+									sw1301 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="second">
+				<header>
+					<div class="number2">
+						<strong>2<span style="font-size: 25pt;">nd</span></strong>
+					</div>
+					<div class="title">
+						<strong>Grand Theft Auto V</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/hvoD7ehZPcM" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">96</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">7.6</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>PC, Play Station 3 & 4, XBOX 360 & ONE</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Modern, Action Adventure</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1302" class="summary" colspan="2"><div id="p1302">summary<div></td>
+						<script>
+							var sw1302 = 1;
+							document.getElementById('s1302').onclick = function(){
+								if(sw1302 === 1){
+									document.getElementById('p1302').innerHTML = "test text";
+									sw1302 = 0;
+								}
+								else{
+									document.getElementById('p1302').innerHTML = "summary";
+									sw1302 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
+			
+			<article class="third">
+				<header>
+					<div class="number3">
+						<strong>3<span style="font-size: 25pt;">rd</span></strong>
+					</div>
+					<div class="title">
+						<strong>BioShock Infinite</strong>
+					</div>
+				</header>
+				
+				<iframe class="vid" width="854" height="480" src="https://www.youtube.com/embed/EsJ55BzIvkE" frameborder="0" allowfullscreen></iframe>
+				
+				<table class="info">
+					<tr>
+						<td class="info_type_meta"><strong>Meta Score</strong></td>
+						<td class="score">94</td>
+					</tr>
+					<tr>
+						<td class="info_type_meta"><strong>User Score</strong></td>
+						<td class="score">8.6</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Platform(s)</strong></td>
+						<td>PC, Play Station 3 & 4, XBOX 360 & ONE</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Genre(s)</strong></td>
+						<td>Action, Shooter, First-Person, Sci-Fi</td>
+					</tr>
+					<tr>
+						<td class="info_type"><strong>Price</strong></td>
+						<td>1234</td>
+					</tr>
+					<tr>
+						<td id="s1303" class="summary" colspan="2"><div id="p1303">summary<div></td>
+						<script>
+							var sw1303 = 1;
+							document.getElementById('s1303').onclick = function(){
+								if(sw1303 === 1){
+									document.getElementById('p1303').innerHTML = "test text";
+									sw1303 = 0;
+								}
+								else{
+									document.getElementById('p1303').innerHTML = "summary";
+									sw1303 = 1;
+								}
+							}
+						</script>
+					</tr>
+				</table>
+			</article>
 		</section>
 	</main>
 
 	<footer>
-		made by Jinhyun, Nam
+		made by Jinhyun, Nam<br/>
+		2012311799
 	</footer>
 </body>
 </html>
