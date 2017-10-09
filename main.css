@@ -12,23 +12,65 @@ body {
 
 #banner {
 	margin: 0px;
-	padding: 0px;
-	background-color: orange;
+	height: 582px;
+	width: 1920px;
+	background-image: url("./image/banner_bg.jpeg");
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	display: table-cell;
 }
 
-#logo {
-	margin: 0px;
-	padding: 0px;
+#banner > #ln {
+	width: 500px;
+	height: 150px;
+	background-color: rgba(45, 45, 45, 0.8);
+	margin: auto;
+}
+
+#ln > #logo {
 	width: 100%;
-	height: 200px;
-	position: relative;
+	height: 75%;
+	font-size: 75pt;
+	color: white;
+	text-align: center;
+}
+#ln > #name {
+	width: 100%;
+	color: rgb(170, 170, 170);
+	text-align: right;
 }
 
 #navi {
-	padding: 0px;
-	margin: 0px;
 	width: 100%;
-	background-color: aqua;
+	padding-left: 100px;
+	margin: 0px;
+	height: 40px;
+	background-color: rgb(45, 45, 45);
+	overflow: hidden;
 }
 
+#navi > ul {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
 
+#navi .navi_item {
+	list-style: none;
+	height: 40px;
+	padding-top: 8px;
+	width: 200px;
+	float: left;
+	color: rgb(170, 170, 170);
+	border-left: 1px solid rgb(170, 170, 170);
+}
+
+#navi .navi_item:hover {
+	color: white;
+}
+
+footer {
+	text-align: right;
+	color: white;
+	background-color: rgba(45, 45, 45, 0.8);
+}
