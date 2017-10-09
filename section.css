@@ -1,0 +1,112 @@
+section {
+	padding: 0 100px;
+}
+
+section > header {
+	position: relative;
+	margin-left: 20px;
+	top: 100px;
+}
+
+article {
+	width: 1400px;
+	height: 600px;
+	position: relative;
+	
+	padding: 10px;
+}
+
+article > header {
+	margin: 10px;
+	padding: 0px;
+	height: 100px;
+}
+
+.number1 {
+	float: left;
+	text-align: center;
+	width: 100px;
+	font-size: 52pt;
+	color: gold;
+	background-color: white;
+}
+.number2 {
+	float: left;
+	text-align: center;
+	width: 100px;
+	font-size: 52pt;
+	color: rgb(200, 200, 200);
+	background-color: white;
+}
+.number3 {
+	float: left;
+	text-align: center;
+	width: 100px;
+	font-size: 52pt;
+	color: rgb(220, 120, 60);
+	background-color: white;
+}
+
+.title {
+	padding-top: 20px;
+	margin-left: 120px;
+	font-size: 25pt;
+}
+
+.first {
+	background-color: gold;
+	top: 200px;
+	z-index: 300;
+}
+.second {
+	background-color: rgb(200, 200, 200);
+	left: 250px;
+	z-index: 200;
+}
+.second:hover {
+	z-index: 300;
+}
+.third {
+	background-color: rgb(220, 120, 60);
+	left: 100px;
+	bottom: 200px;
+	z-index: 100;
+}
+.third:hover {
+	z-index: 300;
+}
+
+.vid {
+	
+	float: left;
+}
+
+.info {
+	padding-left: 10px;
+	height: 480px;
+	font-size: 14pt;
+}
+
+.info td {
+	height: 40px;
+	text-align: center;
+	background-color: rgb(0, 160, 230);
+	color: rgb(230, 230, 230);
+}
+.info .info_type {
+	width: 150px;
+}
+.info .info_type_meta {
+	width: 150px;
+	background-color: rgb(100, 200, 50);
+}
+
+.info .score {
+	background-color: rgb(100, 200, 50);
+	width: 400px;
+	font-size: 23pt;
+}
+
+.info .summary {
+	height: 250px;
+}
