@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Game: Bulls and Cows</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+        .strike {
+            color: darkgreen;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        .ball {
+            color: blue;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        .out {
+            color: red;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        .score {
+            color: blue;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="textarea"></div>
+
+    <script>
+        var num_players = 5;
+        var num_digits = 3;
+
+        var answer;
+        var score;
+        var round;
+        var finished;
+
+        function setPlayers(players) {
+            num_players = players;
+        }
+        function setDigits(digits) {
+            num_digits = digits;
+        }
+
+        function init() {
+            answer = [];
+            score = [];
+            round = [];
+            finished = [];
+
+            var pool = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+            for (var i = 0; i < num_players; ++i) {
+                var temp = "";
+                var pool_length = 10;
+
+                for (var j = 0; j < num_digits; ++j) {
+                    var index = Math.floor(Math.random() * 100) % pool_length;
+                    temp += pool[index];
+
+                    pool_length -= 1;
+
+                    var t = pool[index];
+                    pool[index] = pool[pool_length];
+                    pool[pool_length] = t;
+                }
+
+                answer.push(temp);
+                score.push(0);
+                round.push(0);
+                finished.push(false);
+                //console.log(pool);
+            }
+        }
+
+        function compare(player, number) {
+            var strike = 0;
+            var ball = 0;
+            var out = 0;
+
+            for (var i = 0; i < num_digits; ++i) {
+                if (number[i] == answer[player][i]) {
+                    strike += 1;
+                    continue;
+                }
+
+                var idx;
+                for (idx = 0; idx < num_digits; ++idx) {
+                    if (number[i] == answer[player][idx])
+                        break;
+                }
+
+                if (idx == num_digits)
+                    ball += 1;
+                else
+                    out += 1;
+            }
+
+            return strike + 'S' + ball + 'B' + out + 'O';
+        }
+
+        function printStatus(player, number, strike, ball, out) {
+            var msg = "";
+
+            if (strike == num_digits) {
+                msg += "<br/><h1>" + player + "조 Congratulations!</h1>"
+            }
+            else {
+
+                msg += "<br/><br/><h1>" + player + "조: " + number + "</h1>"
+                if (strike > 0) {
+                    msg += '<span class="strike">' + strike + ' S</span> &nbsp;&nbsp;&nbsp;';
+                }
+                if (ball > 0) {
+                    msg += '<span class="ball">' + ball + ' B</span> &nbsp;&nbsp;&nbsp;';
+                }
+                if (out > 0) {
+                    msg += '<span class="out">' + out + ' O</span>';
+                }
+            }
+
+            //document.write(msg);
+            //document.getElementById("textarea").innerHTML = msg;
+            return msg;
+        }
+
+        function next() {
+
+            var player;
+            var log = "";
+
+            for (player = 0; player < num_players; ++player) {
+                if (finished[player])
+                    continue;
+
+                var num = prompt((player + 1).toString() + "조: put your answer");
+
+                //console.log(num);
+
+                var strike = 0;
+                var ball = 0;
+                var out = 0;
+
+                for (var d1 = 0, d2; d1 < num_digits; ++d1) {
+                    if (num[d1] === answer[player][d1]) {
+                        strike += 1;
+                        //console.log("find strike " + num[d1]);
+                        continue;
+                    }
+                    for (d2 = 0; d2 < num_digits; ++d2) {
+                        if (num[d1] === answer[player][d2])
+                            break;
+                    }
+
+                    if (d2 === num_digits) {
+                        out += 1;
+                        //console.log("find out " + num[d1]);
+                    }
+                    else {
+                        ball += 1;
+                        //console.log("find ball " + num[d1]);
+                    }
+                }
+
+                console.log(num + " (" + (player + 1).toString() + "조) " + strike + "S" + ball + "B" + out + "O");
+
+
+                if (strike == num_digits) {
+                    finished[player] = true;
+                }
+                else {
+                    score[player] -= 1;
+                    round[player] += 1;
+                }
+
+                log += printStatus(player + 1, num, strike, ball, out);
+            }
+
+
+            for (player = 0; player < num_players; ++player) {
+                if (!finished[player])
+                    break;
+            }
+
+            if (player == num_players) {
+                // show score board
+                var scoreboard = "<br/><h1>Score Board</h1>";
+
+                for (player = 0; player < num_players; ++player) {
+                    scoreboard += '<br/><span class="score">' + (player + 1).toString() +
+                        '조 -  ' + round[player] + ' try' + '</span>';
+                }
+
+                //document.write(scoreboard);
+                document.getElementById("textarea").innerHTML = scoreboard;
+            }
+            else {
+                document.getElementById("textarea").innerHTML = log;
+            }
+        }
+        
+    </script>
+</body>
+</html>
